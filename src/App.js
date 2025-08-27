@@ -1,25 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+// src/App.js
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Navbar from "./components/Navbar";
+import HomePage from "./components/HomePage";
+import UploadLostItemForm from "./components/UploadLostItemForm";
+import LostItemsGallery from "./components/LostItemsGallery";
+import Callback from "./components/Callback";
+import VerifyItem from "./components/VerifyItem";
+import UserProfile from "./components/UserProfile";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export default function App() {
+    return (
+        <Router>
+            <Navbar />
+            <Routes>
+                <Route path="/" element={<HomePage />} />
+                <Route path="/upload" element={<UploadLostItemForm />} />
+                <Route path="/dashboard" element={<LostItemsGallery />} /> {/* public gallery */}
+                <Route path="/my-profile" element={<UserProfile />} /> {/* route to /my-profile */}
+                <Route path="/callback" element={<Callback />} />
+                <Route path="/verify/:verificationCode" element={<VerifyItem />} />
+            </Routes>
+        </Router>
+    );
 }
-
-export default App;
