@@ -9,7 +9,7 @@
        scope: ['openid', 'email', 'profile'], 
        redirectSignIn: 'https://lostit-frontend.onrender.com/callback', 
        redirectSignOut: 'https://lostit-frontend.onrender.com/', 
-       responseType: 'token',
+       responseType: 'code',
      } 
    } 
  }; 
