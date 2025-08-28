@@ -12,7 +12,8 @@ function UploadLostItemForm() {
         itemName: '',
         description: '',
         location: '',
-        dateLost: '' // This maps to 'createdAt' in the backend
+        dateLost: '',
+        contactInfo: ''
     });
     const [file, setFile] = useState(null);
     const [preview, setPreview] = useState(null);
@@ -262,6 +263,26 @@ function UploadLostItemForm() {
                                 </div>
                             </div>
                         </div>
+
+                        {/* Contact Info */}
+                        <div className="sm:col-span-2">
+  <label htmlFor="contactInfo" className="block text-sm font-medium text-gray-700">
+    How can someone contact you?
+  </label>
+  <div className="mt-1 relative rounded-md shadow-sm">
+    <input
+      type="text"
+      name="contactInfo"
+      id="contactInfo"
+      value={formData.contactInfo || ""}
+      onChange={handleInputChange}
+      className="focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md py-3 px-4"
+      placeholder="Enter your email or phone number"
+      required
+    />
+  </div>
+</div>
+
 
                         {/* Status Message */}
                         {submitStatus && (

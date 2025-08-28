@@ -90,6 +90,7 @@
          location: itemData.location, 
          createdAt: itemData.dateLost, 
          itemType: itemData.itemType, 
+        contactInfo: itemData.contactInfo || null,
          imageUrl: imageUrl 
      }; 
 
