@@ -7,8 +7,8 @@
      oauth: { 
        domain: process.env.REACT_APP_COGNITO_DOMAIN,
        scope: ['openid', 'email', 'profile'], 
-       redirectSignIn: 'https://lostit-frontend.onrender.com/callback', 
-       redirectSignOut: 'https://lostit-frontend.onrender.com/', 
+       redirectSignIn: 'https://lostit.onrender.com/callback', 
+       redirectSignOut: 'https://lostit.onrender.com/', 
        responseType: 'code',
      } 
    } 
